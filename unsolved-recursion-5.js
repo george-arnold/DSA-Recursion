@@ -21,7 +21,7 @@ const newSplit = function (string) {
   }
   let delimiter = string.indexOf("/");
   if (delimiter > -1) {
-    string.substring(0, delimiter);
+    let item = string.substring(0, delimiter);
   }
 
   return newSplit(string.substr(1));
