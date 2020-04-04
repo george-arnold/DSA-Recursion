@@ -15,11 +15,11 @@
 
 // console.log(newName) // ["Sa", "aa", "ma", "ma", "ya"]
 
-const newSplit = function (string) {
+const newSplit = function (string, delimeter) {
   if (string === "") {
     return [];
   }
-  let index = string.indexOf("/");
+  let index = string.indexOf(delimeter);
   if (index > -1) {
     let item = string.substr(0, index);
     return [item].push(newSplit(string.substr(index + 1)));
