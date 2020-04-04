@@ -16,9 +16,9 @@
 // console.log(newName) // ["Sa", "aa", "ma", "ma", "ya"]
 
 const newSplit = function (string) {
-  const map = Array.prototype.map;
   if (string === "") {
-    return "";
+    return [];
   }
+  let delimiter = string.indexOf("/");
   return newSplit(string.substr(1));
 };

@@ -7,5 +7,5 @@ const fibonacci = function (num) {
   if (num < 2) {
     return num;
   }
-  return (fibonacci(num - 1) + fibonacci(num - 2)).toString();
+  return fibonacci(num - 1) + fibonacci(num - 2);
 };
