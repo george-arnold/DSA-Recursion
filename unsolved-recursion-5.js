@@ -24,4 +24,5 @@ const newSplit = function (string, delimeter) {
     let item = string.substr(0, index);
     return [item].push(newSplit(string.substr(index + 1)));
   }
+  return [string];
 };
