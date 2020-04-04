@@ -20,5 +20,9 @@ const newSplit = function (string) {
     return [];
   }
   let delimiter = string.indexOf("/");
+  if (delimiter > -1) {
+    string.slice(0, delimiter);
+  }
+
   return newSplit(string.substr(1));
 };
