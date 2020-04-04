@@ -22,7 +22,7 @@ const newSplit = function (string, delimeter) {
   let index = string.indexOf(delimeter);
   if (index > -1) {
     let item = string.substr(0, index);
-    return [item].push(newSplit(string.substr(index + 1), delimeter));
+    return [item].concat(newSplit(string.substr(index + 1), delimeter));
   }
   return [string];
 };
