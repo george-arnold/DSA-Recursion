@@ -19,9 +19,9 @@ const newSplit = function (string) {
   if (string === "") {
     return [];
   }
-  let delimiter = string.indexOf("/");
-  if (delimiter > -1) {
-    let item = string.substr(0, delimiter);
-    return [item].push(newSplit(string.substr(delimiter + 1)));
+  let index = string.indexOf("/");
+  if (index > -1) {
+    let item = string.substr(0, index);
+    return [item].push(newSplit(string.substr(index + 1)));
   }
 };
