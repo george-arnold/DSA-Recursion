@@ -26,3 +26,21 @@ const newSplit = function (string, delimeter) {
   }
   return [string];
 };
+
+// iterative Big O -> O(n)
+const newSplitI = function (string, delimeter) {
+  let array = [];
+  let index = 0;
+  for (let i = 0; i <= string.length; i++) {
+    if (string[i] === delimeter) {
+      let item = string.slice(index, i);
+      array.push(item);
+      index = i + 1;
+    }
+    if (i === string.length) {
+      let item = string.slice(index, i);
+      array.push(item);
+    }
+  }
+  return array;
+};

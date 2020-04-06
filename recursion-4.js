@@ -4,9 +4,19 @@
 // and is equal to the sum of the n natural numbers from 1 to n.
 // This is the Triangular Number Sequence: 1, 3, 6, 10, 15, 21, 28, 36, 45.
 
+//recursive -> O(n)
 const triangleNum = function (num) {
   if (num === 1) {
     return 1;
   }
   return num + triangleNum(num - 1);
+};
+
+//iterative -> O(n)
+const trinagleNumI = function (num) {
+  let result = 0;
+  for (let i = 0; i <= num; i++) {
+    result += i;
+  }
+  return result;
 };
