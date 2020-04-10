@@ -26,3 +26,6 @@ const fibI = function (num) {
   }
   return result;
 };
+
+console.log("recursion", fibonacci(10));
+console.log("iterative", fibI(10));
